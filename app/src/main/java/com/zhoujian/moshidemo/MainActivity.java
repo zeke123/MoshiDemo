@@ -3,16 +3,12 @@ package com.zhoujian.moshidemo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
-
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
-
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-
 
     private TextView tv_bean;
     private TextView tv_json;
@@ -21,10 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         tv_bean = (TextView) findViewById(R.id.tv_bean);
         tv_json = (TextView) findViewById(R.id.tv_json);
-
 
         String json = "{\n" +
                 "    \"name\": \"BeJson\",\n" +
@@ -68,7 +62,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 }
